@@ -1,0 +1,99 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Dpen</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<link href="styles.css" rel="stylesheet">
+    <script src="popup.js"></script>
+  </head>
+  <body>
+	<div class="wrapper">
+		<div class="header">
+			<img class="logo" src="images/icon-48.png">
+			<ul>
+				<li><a id="link_unread_notification">沒有通知</a></li>
+				<li><a id="link_unread_mail">沒有新信件</a></li>
+			</ul>
+			<ul class="fright">
+				<li><a id="link_share">分享</a></li>
+				<li><a id="link_wootrans">WooTrans</a></li>
+				<li><a id="link_dcard">Dcard</a></li>
+			</ul>
+		</div>
+		<input id="login_button" type="submit" value="登入" class="btn btn-primary hidden">
+		<div id="dcard" class="hidden">
+			<div class="left">
+				<img id="dcard_photo" alt="">
+				<div style="text-align:center;">
+	                <button id="btn_show_invitation_form" class="btn btn-success hidden">送出好友邀請</button>
+	                <h3 id="label_invitation_sent" class="hidden">你已送出邀請</h3>
+	                <h3 id="label_invitation_accepted" class="hidden">已成為好友</h3>
+	            </div>
+        	</div>
+        	<div class="right">
+        		<table id="dcard_table" class="table">
+                    <tbody>
+                        <tr>
+                            <th>性別</th>
+                            <td id="dcard_gender"></td>
+                        </tr>
+                        <tr>
+                            <th>學校</th>
+                            <td id="dcard_school"></td>
+                        </tr>
+                        <tr>
+                            <th>系所</th>
+                            <td id="dcard_department"></td>
+                        </tr>
+                        <tr>
+                            <th>年級</th>
+                            <td id="dcard_grade"></td>
+                        </tr>
+                        <tr>
+                            <th>專長、興趣</th>
+                            <td id="dcard_talent"></td>
+                        </tr>
+                        <tr>
+                            <th>參加過的社團</th>
+                            <td id="dcard_club"></td>
+                        </tr>
+                        <tr>
+                            <th>喜歡的課</th>
+                            <td id="dcard_lecture"></td>
+                        </tr>
+                        <tr>
+                            <th>喜歡的國家</th>
+                            <td id="dcard_lovedcountry"></td>
+                        </tr>
+                        <tr>
+                            <th>自己最近的困擾</th>
+                            <td id="dcard_trouble"></td>
+                        </tr>
+                        <tr>
+                            <th>可以交換學習的才藝</th>
+                            <td id="dcard_exchange"></td>
+                        </tr>
+                        <tr>
+                            <th>想嘗試的事情</th>
+                            <td id="dcard_wanttotry"></td>
+                        </tr>
+                    </tbody>
+                </table>
+                <div id="invitation_form" class="invitation-form hidden">
+                    <div class="invitation-header">
+                        <h3 class="invitation-title">送給對方的第一句話：</h3>
+                        <h5>如果成為好友，對方才會收到喲！</h5>
+                    </div>
+                    <div class="invitation-body">
+                        <textarea id='textarea_invitation' class="form-control" type="text"></textarea>
+                    </div>
+                    <div class="invitation-footer">
+                        <button type="button" id='btn_cancel' class="btn btn-default cancel">取消</button>
+                        <button id="btn_send" class="btn btn-primary" disabled="disabled">送出</button>
+                    </div>
+                </div>
+        	</div>
+		</div>
+	</div>
+  </body>
+</html>
