@@ -1,10 +1,12 @@
 body {
-	background-color: rgb(235, 235, 235);
+  background-color: rgb(45, 62, 80);
 	overflow-x:hidden;
+  height: 100%;
+  margin: 0;
 }
 
 a {
-	color: #999;
+	color: #fff;
 	cursor: pointer;
 	text-decoration: none;
 }
@@ -13,11 +15,187 @@ a:hover {
 	color: #333;
 }
 
+.notify {
+  background: #B94A48;
+}
+
+.notify:hover {
+  /*color: #c33;*/
+}
+
 .wrapper {
+  background-color: rgb(235, 235, 235);
+  overflow: auto;
+  margin: 10px 25px;
+  padding: 5px;
+  border-radius: 5px;
 }
 
 .hidden {
 	display: none !important;
+}
+
+.fleft {
+  float: left;
+}
+
+.fright {
+	float: right;
+}
+
+.logo {
+  cursor: pointer;
+	display: inline-block;
+	width: 48px;
+	height: 48px;
+  vertical-align: middle;
+}
+
+.logo:hover {
+  opacity: 0.8;
+}
+
+.header {
+  background-color: #266d96;
+	height: 48px;
+	margin-bottom: 10px;
+	min-width: 300px;
+  padding: 3px 25px;
+}
+
+.header>div {
+  display:inline-block;
+  vertical-align:middle;
+  width:49%;
+}
+
+.notification-links {
+  display: inline-block;
+  list-style: none;
+  padding: 0;
+  margin: 0 0 0 8px;
+  vertical-align: middle;
+}
+
+.share-links {
+	display: inline-block;
+  float: right;
+	list-style: none;
+	padding: 0;
+	margin: 0;
+  vertical-align: middle;
+}
+
+.share-links li a {
+	display: block;
+	width: 60px;
+	text-align: center;
+}
+
+.left {
+	float: left;
+	width: 300px;
+}
+
+.right {
+	float: left;
+	width: 430px;
+	height: 480px;
+	margin-left: 10px;
+	overflow-x: hidden;
+}
+
+.table {
+  background-color: transparent;
+  border-spacing: 0;
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+
+tr {
+	line-height: 23px;
+}
+tr:nth-child(odd) {
+	background-color: #f9f9f9;
+}
+th {
+	width: 18%;
+	padding: 5px;
+}
+td {
+	padding: 5px;
+}
+
+
+#dcard {
+	width: 920px;
+}
+
+#dcard_photo {
+	border-radius: 5px;
+	width: 300px;
+	height: 400px;
+	margin-bottom: 10px;
+}
+
+#login_button {
+	width: 100%;
+}
+
+h3, h5 {
+  font-family: Roboto,"黑體-繁","Heiti TC","蘋果儷中黑","Apple LiGothic Medium","微軟正黑體","Microsoft JhengHei",sans-serif;
+  font-weight: 400;
+  line-height: 1.1;
+}
+
+h3 {
+  display: block;
+  font-size: 24px;
+  -webkit-margin-before: 1em;
+  -webkit-margin-after: 1em;
+  -webkit-margin-start: 0px;
+  -webkit-margin-end: 0px;
+}
+
+h5 {
+  font-size: 14px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.invitation-form {
+  min-height: 450px;
+}
+
+.invitation-header {
+  padding: 15px;
+  min-height: 16.428571429px;
+}
+
+.invitation-title {
+  margin: 0;
+  line-height: 1.428571429;
+}
+
+.invitation-body {
+  position: relative;
+}
+
+.invitation-footer {
+  padding: 19px 20px 20px;
+  text-align: right;
+}
+
+textarea {
+	background: #fff;
+	border: 1px solid #ccc;
+	border-radius: 5px;
+	width: 85%;
+	height: 250px;
+	resize: none;
+	margin: 0px 15px;
+	padding: 6px 12px;
 }
 
 .btn {
@@ -176,141 +354,4 @@ fieldset[disabled] .btn-success:focus,
 fieldset[disabled] .btn-success:hover {
     background-color: #5cb85c;
     border-color: #4cae4c
-}
-
-.fright {
-	float: right;
-}
-
-.logo {
-	display: inline-block;
-	width: 48px;
-	height: 48px;
-}
-
-.header {
-	height: 48px;
-	margin-bottom: 10px;
-	min-width: 300px;
-}
-
-.header ul {
-	display: inline-block;
-	list-style: none;
-	padding: 0;
-	margin: 0;
-}
-
-.header ul li a {
-	cursor: pointer;
-	display: block;
-	width: 60px;
-	text-align: center;
-	text-decoration: none;
-}
-
-.left {
-	float: left;
-	width: 300px;
-}
-
-.right {
-	float: left;
-	width: 480px;
-	height: 480px;
-	margin-left: 10px;
-	overflow-x: hidden;
-}
-
-.table {
-  background-color: transparent;
-  border-spacing: 0;
-  width: 100%;
-  margin-bottom: 10px;
-}
-
-
-tr {
-	line-height: 23px;
-}
-tr:nth-child(odd) {
-	background-color: #f9f9f9;
-}
-th {
-	width: 18%;
-	padding: 5px;
-}
-td {
-	padding: 5px;
-}
-
-
-#dcard {
-	width: 920px;
-}
-
-#dcard_photo {
-	border-radius: 20px;
-	width: 300px;
-	height: 400px;
-	margin-bottom: 10px;
-}
-
-#login_button {
-	width: 100%;
-}
-
-h3, h5 {
-  font-family: Roboto,"黑體-繁","Heiti TC","蘋果儷中黑","Apple LiGothic Medium","微軟正黑體","Microsoft JhengHei",sans-serif;
-  font-weight: 400;
-  line-height: 1.1;
-}
-
-h3 {
-  display: block;
-  font-size: 24px;
-  -webkit-margin-before: 1em;
-  -webkit-margin-after: 1em;
-  -webkit-margin-start: 0px;
-  -webkit-margin-end: 0px;
-}
-
-h5 {
-  font-size: 14px;
-  margin-top: 10px;
-  margin-bottom: 10px;
-}
-
-.invitation-form {
-  min-height: 450px;
-}
-
-.invitation-header {
-  padding: 15px;
-  min-height: 16.428571429px;
-}
-
-.invitation-title {
-  margin: 0;
-  line-height: 1.428571429;
-}
-
-.invitation-body {
-  position: relative;
-}
-
-.invitation-footer {
-  padding: 19px 20px 20px;
-  text-align: right;
-}
-
-textarea {
-	background: #fff;
-	border: 1px solid #ccc;
-	border-radius: 5px;
-	width: 85%;
-	height: 250px;
-	resize: none;
-	margin: 0px 15px;
-	padding: 6px 12px;
 }

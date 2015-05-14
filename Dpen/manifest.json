@@ -1,27 +1,31 @@
 {
   "manifest_version": 2,
 
+  "background": {
+    "persistent": false,
+    "page": "background.html"
+  },
+
   "name": "Dpen",
   "description": "天天快速開Dcard！",
   "version": "0.1",
 
 	"browser_action": {
-		"default_icon": { 
-			"19": "images/icon-19.png", 
-			"38": "images/icon-38.png" 
-          },
+		"default_icon": "images/icon-19.png",
 		"default_popup": "popup.html"
 	},
   
   "icons": {
-		"16": "images/icon-16.png",
-		"48": "images/icon-48.png",
 		"128": "images/icon-128.png" 
 	},
 	
 	"permissions": [
+		"alarms",
+	    "tabs",
+	    "webNavigation",
 		"cookies",
 		"*://www.dcard.tw/*",
+		"storage",
 		"https://www.google-analytics.com/"
 	],
   
