@@ -116,6 +116,10 @@ function startRequest(params) {
   // Schedule request immediately. We want to be sure to reschedule, even in the
   // case where the extension process shuts down while this request is
   // outstanding.
+
+  console.log("startRequest");
+  console.log(params);
+
   if (params && params.scheduleRequest) scheduleRequest();
 
   function stopLoadingAnimation() {
@@ -252,7 +256,14 @@ function onInit() {
     // for a little while just to be sure the refresh alarm is working nicely.
     chrome.alarms.create('watchdog', {periodInMinutes:5});
   }
-}
+
+  chrome.extension.onMessage.addListener( function(request,sender,sendResponse) {
+    console.log("background received message: " + request.greeting);
+    if( request.greeting === "updateUnreadCount" ) {
+      startRequest({scheduleRequest:false, showLoadingAnimation:false});
+      sendResponse({});
+    }});
+  }
 
 function onAlarm(alarm) {
   console.log('Got alarm', alarm);
@@ -293,7 +304,7 @@ var filters = {
 
 function onNavigate(details) {
   if (details.url && isDcardUrl(details.url)) {
-    console.log('Recognized Gmail navigation to: ' + details.url + '.' +
+    console.log('Recognized Dcard navigation to: ' + details.url + '.' +
                 'Refreshing count...');
     startRequest({scheduleRequest:false, showLoadingAnimation:false});
   }

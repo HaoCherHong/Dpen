@@ -22,7 +22,7 @@ function sendInvitation(first) {
 			//success
 			window.location.reload()
 		} else {
-			alert(error)
+			console.error(error)
 		}
 	})
 }
@@ -58,7 +58,7 @@ function show(element) {
 }
 
 function replaceLinebreak(str) {
-	return str.replace(/(?:\r\n|\r|\n)/g, '<br />')
+	return str ? str.replace(/(?:\r\n|\r|\n)/g, '<br />') : '';
 }
 
 function showDcard() {
@@ -158,8 +158,15 @@ function showDcard() {
 			troubleTd.innerHTML = replaceLinebreak(result.dcard.trouble)
 			exchangeTd.innerHTML = replaceLinebreak(result.dcard.exchange)
 			wanttotryTd.innerHTML = replaceLinebreak(result.dcard.wanttotry)
+
+			//Tell background to update button icon
+			console.log('sending updateUnreadCount message..');
+			chrome.extension.sendMessage({greeting: "updateUnreadCount"}, function (response) {
+	            console.log(response);
+	        });
+
 		} else {
-			alert(error)
+			console.error(error)
 		}
 	})
 }
@@ -237,7 +244,7 @@ document.addEventListener('DOMContentLoaded', function() {
 				})
 			}
 		} else {
-			alert(error)
+			console.error(error)
 		}
 	});
 	
