@@ -209,12 +209,12 @@ document.addEventListener('DOMContentLoaded', function() {
 	})
 	document.getElementById('link_share').addEventListener('click', function() {
 		_gaq.push(['_trackEvent', 'click', 'share']);
-		var win = window.open('https://chrome.google.com/webstore/detail/dpen/aflhihlkalkmbjgjhejhloapaljaohih/', '_blank');
+		var win = window.open('https://chrome.google.com/webstore/detail/dpen/aflhihlkalkmbjgjhejhloapaljaohih/?utm_source=dpen&utm_medium=share%20link&utm_campaign=interlink', '_blank');
 		win.focus;
 	})
 	document.getElementById('link_wootrans').addEventListener('click', function() {
 		_gaq.push(['_trackEvent', 'click', 'wootrans']);
-		var win = window.open('https://chrome.google.com/webstore/detail/wootrans/jonegeahehknbgnifdfbnidfpfigpdcp/', '_blank');
+		var win = window.open('https://chrome.google.com/webstore/detail/wootrans/jonegeahehknbgnifdfbnidfpfigpdcp/?utm_source=dpen&utm_medium=wootrans%20link&utm_campaign=interlink', '_blank');
 		win.focus;
 	})
 
